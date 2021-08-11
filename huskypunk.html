@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>huskypunk</title>
+
+<script>
+window.onload = function () {
+
+var huskypunk = new image();
+var huskypunknum=Math.floor(math.random()*3)+1; // Change 3 to whatever number of bakgroud files you have
+var huskypunkname="background" + huskypunknum + ".png";
+huskypunk.src=huskypunkname;
+
+huskypunk.onload=function()
+
+  {
+    buildhuskypunk();
+  }
+
+  function buildhuskypunk()
+  {
+     var canvas = document.getelementbyid('canvas');
+     var ctx = canvas.getcontext('2d');
+     canvas.width=400;
+     canvas.height=400;
+
+     ctx.drawimage(huskypunk,((400-huskypunk.width)/2),50);
+
+  }
+}
+
+</script>
+
+  </head>
+
+  <body>
+
+  <div align="center">
+
+<canvas id="canvas" style="border:5px solid #000000;"> </canvas>
+<br><br>
+<button onclick="window.location.reload();"> Generate! </button>
+
+  </div>
+
+
+  </body>
+</html>
